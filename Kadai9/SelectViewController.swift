@@ -9,21 +9,21 @@ import UIKit
 
 class SelectViewController: UIViewController {
     
-    public var place = ""
+    private(set) var selectedPrefectureName: String?
     @IBAction private func tokyoBtn(_ sender: Any) {
-        place = "東京都"
-        performSegue(withIdentifier: "exit", sender: sender)
+        selectedPrefecture(prefectureName: "東京都", sender: sender)
     }
     @IBAction private func kanagawaBtn(_ sender: Any) {
-        place = "神奈川県"
-        performSegue(withIdentifier: "exit", sender: sender)
+        selectedPrefecture(prefectureName: "神奈川県", sender: sender)
     }
     @IBAction private func saitamaBtn(_ sender: Any) {
-        place = "埼玉県"
-        performSegue(withIdentifier: "exit", sender: sender)
+        selectedPrefecture(prefectureName: "埼玉県", sender: sender)
     }
     @IBAction private func tibaBtn(_ sender: Any) {
-        place = "千葉県"
+        selectedPrefecture(prefectureName: "千葉県", sender: sender)
+    }
+    private func selectedPrefecture(prefectureName: String, sender: Any) {
+        selectedPrefectureName = prefectureName
         performSegue(withIdentifier: "exit", sender: sender)
     }
 }
