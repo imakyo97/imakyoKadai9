@@ -15,8 +15,8 @@ class ViewController: UIViewController {
     }
     @IBAction private func selectPlace (segue: UIStoryboardSegue) {
         
-        let selectVC = segue.source as! SelectViewController
-        placeLabel.text = selectVC.place
+        guard let selectVC = segue.source as? SelectViewController else { return }
+        placeLabel.text = selectVC.selectedPrefectureName
     }
 }
 
