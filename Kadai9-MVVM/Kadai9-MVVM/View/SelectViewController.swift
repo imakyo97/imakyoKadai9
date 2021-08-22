@@ -53,25 +53,25 @@ final class SelectViewController: UIViewController {
 
         tokyoButton.rx.tap
             .bind(onNext: { [weak self] in
-                self?.viewModel.inputs.didTapPrefecturesButton(index: 0)
+                self?.viewModel.inputs.didTapPrefecturesButton(index: PrefectureIndex.tokyo)
             })
             .disposed(by: disposeBag)
 
         kanagawaButton.rx.tap
             .bind(onNext: { [weak self] in
-                self?.viewModel.inputs.didTapPrefecturesButton(index: 1)
+                self?.viewModel.inputs.didTapPrefecturesButton(index: PrefectureIndex.kanagawa)
             })
             .disposed(by: disposeBag)
 
         saitamaButton.rx.tap
             .bind(onNext: { [weak self] in
-                self?.viewModel.inputs.didTapPrefecturesButton(index: 2)
+                self?.viewModel.inputs.didTapPrefecturesButton(index: PrefectureIndex.saitama)
             })
             .disposed(by: disposeBag)
 
         tibaButton.rx.tap
             .bind(onNext: { [weak self] in
-                self?.viewModel.inputs.didTapPrefecturesButton(index: 3)
+                self?.viewModel.inputs.didTapPrefecturesButton(index: PrefectureIndex.tiba)
             })
             .disposed(by: disposeBag)
 
@@ -85,5 +85,14 @@ final class SelectViewController: UIViewController {
                 }
             })
             .disposed(by: disposeBag)
+    }
+}
+
+extension SelectViewController {
+    enum PrefectureIndex {
+        static let tokyo = 0
+        static let kanagawa = 1
+        static let saitama = 2
+        static let tiba = 3
     }
 }
