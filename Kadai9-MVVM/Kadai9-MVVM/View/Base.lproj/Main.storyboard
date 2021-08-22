@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Main View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="MainViewController" customModule="Kadai9_MVVM" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="都道府県" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mem-YF-Atq">
+                                <rect key="frame" x="50" y="94" width="70" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="未選択" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sdi-cQ-EOR">
+                                <rect key="frame" x="181" y="94" width="52" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FHg-tZ-ffg">
+                                <rect key="frame" x="303" y="89.5" width="31" height="30"/>
+                                <state key="normal" title="入力"/>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="FHg-tZ-ffg" firstAttribute="centerY" secondItem="Sdi-cQ-EOR" secondAttribute="centerY" id="3pH-pn-Xnq"/>
+                            <constraint firstItem="Sdi-cQ-EOR" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="AjL-nv-iuh"/>
+                            <constraint firstItem="Sdi-cQ-EOR" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="mem-YF-Atq" secondAttribute="trailing" constant="8" symbolic="YES" id="Dy6-mG-cjs"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="FHg-tZ-ffg" secondAttribute="trailing" id="Z3m-te-EKE"/>
+                            <constraint firstItem="mem-YF-Atq" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="ceu-5C-TcR"/>
+                            <constraint firstItem="FHg-tZ-ffg" firstAttribute="leading" secondItem="Sdi-cQ-EOR" secondAttribute="trailing" constant="70" id="f7a-D2-NnU"/>
+                            <constraint firstItem="Sdi-cQ-EOR" firstAttribute="centerY" secondItem="mem-YF-Atq" secondAttribute="centerY" id="kvt-T4-x6Y"/>
+                            <constraint firstItem="Sdi-cQ-EOR" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="qNe-zR-j6T"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="inputButton" destination="FHg-tZ-ffg" id="qwN-X4-59h"/>
+                        <outlet property="prefectureLabel" destination="Sdi-cQ-EOR" id="H1Z-af-yJc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="102.89855072463769" y="115.84821428571428"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
